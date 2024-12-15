@@ -1,3 +1,3 @@
-module github.com/Ramya-R74/go-web-app/
+module github.com/Ramya-R74/My-go-web-app
 
 go 1.22.5
