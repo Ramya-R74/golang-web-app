@@ -6,50 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
 
+        /* Header Styling */
         header {
-            background-color: #333;
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        nav ul {
+        header nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
-        nav ul li {
+        header nav ul li {
             display: inline;
-            margin-right: 10px;
+            margin-right: 15px;
         }
 
-        nav ul li a {
+        header nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
+        header nav ul li a:hover {
+            background-color: #fff;
+            color: #4e54c8;
+            border-radius: 5px;
+        }
+
+        /* Main Content Styling */
         main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        main section {
+            margin-bottom: 30px;
+            background: #fff;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        section {
-            margin-bottom: 20px;
+        main section h1, main section h2 {
+            color: #4e54c8;
         }
 
+        main section p {
+            line-height: 1.6;
+        }
+
+        main section a {
+            color: #8f94fb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        main section a:hover {
+            color: #4e54c8;
+        }
+
+        /* Footer Styling */
         footer {
-            background-color: #333;
+            background: linear-gradient(90deg, #8f94fb, #4e54c8);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
         }
     </style>    
 </head>
@@ -60,32 +108,55 @@
                 <li><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="contact">Contact</a></li>
-                <li><a href="courses">Courses</a></li>
+                <li><a href="courses">Blogs</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h1>Learn DevOps from Basics</h1>
-            <p>The main purpose of this website is to guide people on how to learn DevOps 
-                from basics for Free. We will provide you with the best resources to learn.
+            <h1>Documenting me DevOps journey!</h1>
+            <p>This is a website cretated to document and to practice my DevOps skills.
             </p>
         </section>
 
         <section>
-            <h2>Overview</h2>
-            <p> Zero to Hero courses on all DevOps tools and popular Cloud(AWS and Azure) platform</p>
+            <h2>Overview of My Cloud and DevOps Journey</h2>
+            <p> <pre> My journey into the world of Cloud Computing and DevOps has been a transformative experience, marked by hands-on projects, continuous learning, and a passion for automation. Starting with foundational concepts, I have steadily progressed to implementing real-world solutions that bridge the gap between development and operations.
+
+I began by mastering containerization tools like Docker, where I developed a three-tier application and deployed Flask microservices in separate containers for frontend and backend services. Through this, I gained expertise in Docker images, containers, networks, volumes, and Docker Compose, solidifying my understanding of container-based architectures.
+
+To deepen my knowledge of cloud platforms, I explored Infrastructure as Code (IaC) techniques, automating AWS resource provisioning and deployment processes. Using tools like Terraform and YAML, I successfully demonstrated end-to-end deployment pipelines, showcasing scalable, efficient, and repeatable infrastructure management.
+
+Venturing into Kubernetes, I set up and configured clusters using MicroK8s, gaining proficiency in managing workloads, scaling applications, and optimizing resource utilization. These experiences have given me a solid foundation to tackle complex deployment scenarios in production environments.
+
+Alongside technical skills, I’ve embraced continuous integration and delivery (CI/CD) practices, ensuring rapid and reliable software delivery pipelines. My projects often integrate version control, testing, and deployment workflows, embodying the core principles of DevOps.
+
+Through this journey, I have not only acquired technical expertise but also developed a problem-solving mindset that enables me to design innovative solutions. My work reflects a commitment to staying ahead in the dynamic field of Cloud and DevOps, with a focus on creating impactful, scalable, and efficient systems.
+
+Key Highlights of My Journey:
+
+Proficient in Docker, Kubernetes, and cloud platforms like AWS.
+Demonstrated expertise in IaC with automated deployment pipelines.
+Hands-on experience in microservices architecture and CI/CD pipelines.
+Passion for learning and sharing knowledge through projects and blogs.
+I aim to continue this journey by exploring advanced topics, contributing to open-source projects, and delivering scalable solutions that empower teams and organizations to succeed in the cloud-native era.
+</pre>
+</p>
         </section>
 
         <section>
-            <h2>Courses Offered</h2>
-            <p>Please look at the <a href="courses">courses</a> section.</p>  
+            <h2>Read my Blogs</h2>
+            <p>Please look at the <a href="blogs">Blogs</a> section.</p>  
         </section>
     </main>
 
     <footer>
-        <p>&copy; Abhishek.Veeramalla</p>
+        <p>All rights reserved &copy;Ramya.2024</p>
     </footer>
 </body>
 </html>
+
+
+
+
