@@ -1,68 +1,119 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Ramya's Blog</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+        /* Header Styling */
+        header {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+        header nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
 
-            main {
-                padding: 20px;
-            }
+        header nav ul li a:hover {
+            background-color: #fff;
+            color: #4e54c8;
+            border-radius: 5px;
+        }
 
-            section {
-                margin-bottom: 20px;
-            }
+        /* Main Content Styling */
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./blogs.html">Blog</a></li>
-                </ul>
-            </nav>
-        </header>
+        main section {
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-        <main>
+        main section h1, main section h2 {
+            color: #4e54c8;
+        }
+
+        main section p {
+            line-height: 1.6;
+        }
+
+        main section a {
+            color: #8f94fb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        main section a:hover {
+            color: #4e54c8;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(90deg, #8f94fb, #4e54c8);
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="courses">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
             <section>
                 <h1>Welcome to My Blog</h1>
                 <p>Explore my journey and thoughts on DevOps, Cloud Computing, and Technology through my blogs on Hashnode.</p>
@@ -71,10 +122,10 @@
             </section>
         </main>
 
-        <footer>
-            <p>&copy; Ramya</p>
-        </footer>
-    </body>
+    <footer>
+        <p>All rights reserved &copy;Ramya.2024</p>
+    </footer>
+</body>
 </html>
 
            
