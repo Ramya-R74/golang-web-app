@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact Me</title>
     <style>
         /* General Styling */
         body {
@@ -99,7 +99,87 @@
             margin: 0;
             font-size: 0.9em;
         }
-    </style>    
+
+        /* Form Styling */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -113,39 +193,73 @@
         </nav>
     </header>
 
- <main>
-            <section>
-                <h1>Contact Me</h1>
-                <p>Feel free to reach out to me using the form below or through the contact information provided.</p>
+    <main>
+        <section>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me using the form below or through the contact information provided.</p>
 
-                <form>
-                    <div>
+            <form class="contact-form" onsubmit="return validateForm(event)">
+                <fieldset>
+                    <legend>Contact Details</legend>
+
+                    <div class="form-group">
                         <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
                     </div>
 
-                    <div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone (Optional):</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number." />
+                    </div>
+
+                    <div class="form-group">
                         <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required maxlength="500" oninput="updateCharCount(this)"></textarea>
+                        <small id="charCount">0/500 characters</small>
                     </div>
 
-                    <button type="submit">Submit</button>
-                </form>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </fieldset>
+            </form>
 
-                <h2>Contact Information</h2>
-                <p>Email: <a href="mailto:your.email@example.com">Ramya1234@gmail.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">+91 736287890</a></p>
-                <p>Blog: <a href="https://hashnode.com/@Ramya-R" target="_blank">https://hashnode.com/@Ramya-R</a></p>
-            </section>
-        </main>
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:your.email@example.com">Ramya1234@gmail.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+91 736287890</a></p>
+            <p>Blog: <a href="https://hashnode.com/@Ramya-R" target="_blank">https://hashnode.com/@Ramya-R</a></p>
+        </section>
+    </main>
 
     <footer>
         <p>All rights reserved &copy;Ramya.2024</p>
     </footer>
+
+    <script>
+        function updateCharCount(textarea) {
+            const charCount = textarea.value.length;
+            const charLimit = textarea.maxLength;
+            document.getElementById('charCount').textContent = `${charCount}/${charLimit} characters`;
+        }
+
+        function validateForm(event) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!name || !email) {
+                alert("Name and Email are required.");
+                event.preventDefault();
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
+
