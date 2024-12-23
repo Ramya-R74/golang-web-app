@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goweb-app-deployment
+  labels:
+    app: golang-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-web-app
+  template:
+    metadata:
+      labels:
+        app: golang-web-app
+    spec:
+      containers:
+      - name: goweb-app
+        image: ramya74/golang-web-app:v1
+        ports:
+        - containerPort: 8080

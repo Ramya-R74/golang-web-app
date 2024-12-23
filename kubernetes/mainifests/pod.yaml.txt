@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: goweb-app-pod
+  label:
+    app: golang-web-app
+spec:
+  containers:
+  - name: goweb-app
+    image: ramya74/golang-web-app:v1
+    ports:
+    - containerPort: 8080
